@@ -982,15 +982,12 @@ seatGrid.appendChild(button);
 }
 
 
-/* WHATSAPP BOOKING */
+/* WHATSAPP BOOKING + ZAPIER */
 
 function bookSeat(){
 
-    const name =
-    document.getElementById("name").value.trim();
-
-    const mobile =
-    document.getElementById("mobile").value.trim();
+    const name = document.getElementById("name").value.trim();
+    const mobile = document.getElementById("mobile").value.trim();
 
     if(!name){
         alert("Please enter your name.");
@@ -1007,29 +1004,32 @@ function bookSeat(){
         return;
     }
 
-    // PASTE YOUR ZAPIER WEBHOOK URL BETWEEN THE QUOTES
+    // STEP 1: Paste your Zapier Catch Hook URL inside the quotes below.
     const webhookURL = "https://hooks.zapier.com/hooks/catch/28951429/4mbpils/";
 
-    const bookingData = new URLSearchParams();
-    bookingData.append("name", name);
-    bookingData.append("mobile", mobile);
-    bookingData.append("seat", "Seat " + currentSeat);
-    bookingData.append("fee", "₹400");
-    bookingData.append("source", "12th Fail Library Website");
+    // Send booking data to Zapier. No custom Content-Type header is used.
+    if(!webhookURL.includes("PASTE_YOUR_ZAPIER_WEBHOOK_URL_HERE")){
+        const bookingData = new URLSearchParams();
+        bookingData.append("name", name);
+        bookingData.append("mobile", mobile);
+        bookingData.append("seat", "Seat " + currentSeat);
+        bookingData.append("fee", "₹400");
+        bookingData.append("source", "12th Fail Library Website");
 
-    fetch(webhookURL, {
-        method: "POST",
-        body: bookingData
-    })
-    .then(() => {
-        console.log("Booking sent to Zapier");
-    })
-    .catch((error) => {
-        console.error("Zapier error:", error);
-    });
+        fetch(webhookURL, {
+            method: "POST",
+            body: bookingData
+        })
+        .then(() => {
+            console.log("Booking sent to Zapier");
+        })
+        .catch((error) => {
+            console.error("Zapier error:", error);
+        });
+    }
 
-    const message =
-    `Hello 12th Fail Library,
+    // Open WhatsApp booking message.
+    const message = `Hello 12th Fail Library,
 
 I want to book a seat.
 
@@ -1042,51 +1042,12 @@ Monthly Fee: ₹400
 Please confirm my booking.`;
 
     const whatsappURL =
-    "https://wa.me/918318925696?text="
-    + encodeURIComponent(message);
+        "https://wa.me/918318925696?text=" + encodeURIComponent(message);
 
-    window.open(whatsappURL,"_blank");
-}
-
-if(!mobile){
-
-alert("Please enter your mobile number.");
-
-return;
-
-}
-
-if(!currentSeat){
-
-alert("Please select a seat.");
-
-return;
-
-}
-
-const message =
-`Hello 12th Fail Library,
-
-I want to book a seat.
-
-Name: ${name}
-Mobile: ${mobile}
-Seat: ${currentSeat}
-
-Monthly Fee: ₹400
-
-Please confirm my booking.`;
-
-const whatsappURL =
-"https://wa.me/918318925696?text="
-+ encodeURIComponent(message);
-
-window.open(whatsappURL,"_blank");
-
+    window.open(whatsappURL, "_blank");
 }
 
 </script>
 
 </body>
 </html>
-
