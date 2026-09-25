@@ -788,7 +788,82 @@ placeholder="Enter mobile number"
 
 <label>Select Seat</label>
 
-<div class="seat-grid" id="seatGrid"></div>
+<div class="seat-grid" id="seatGrid">
+<button type="button" class="seat" data-seat="1">Seat 1</button>
+<button type="button" class="seat" data-seat="2">Seat 2</button>
+<button type="button" class="seat booked" data-seat="3" disabled>Seat 3</button>
+<button type="button" class="seat" data-seat="4">Seat 4</button>
+<button type="button" class="seat" data-seat="5">Seat 5</button>
+<button type="button" class="seat" data-seat="6">Seat 6</button>
+<button type="button" class="seat" data-seat="7">Seat 7</button>
+<button type="button" class="seat booked" data-seat="8" disabled>Seat 8</button>
+<button type="button" class="seat" data-seat="9">Seat 9</button>
+<button type="button" class="seat" data-seat="10">Seat 10</button>
+<button type="button" class="seat" data-seat="11">Seat 11</button>
+<button type="button" class="seat" data-seat="12">Seat 12</button>
+<button type="button" class="seat" data-seat="13">Seat 13</button>
+<button type="button" class="seat booked" data-seat="14" disabled>Seat 14</button>
+<button type="button" class="seat" data-seat="15">Seat 15</button>
+<button type="button" class="seat" data-seat="16">Seat 16</button>
+<button type="button" class="seat" data-seat="17">Seat 17</button>
+<button type="button" class="seat" data-seat="18">Seat 18</button>
+<button type="button" class="seat" data-seat="19">Seat 19</button>
+<button type="button" class="seat" data-seat="20">Seat 20</button>
+<button type="button" class="seat booked" data-seat="21" disabled>Seat 21</button>
+<button type="button" class="seat" data-seat="22">Seat 22</button>
+<button type="button" class="seat" data-seat="23">Seat 23</button>
+<button type="button" class="seat" data-seat="24">Seat 24</button>
+<button type="button" class="seat" data-seat="25">Seat 25</button>
+<button type="button" class="seat" data-seat="26">Seat 26</button>
+<button type="button" class="seat" data-seat="27">Seat 27</button>
+<button type="button" class="seat" data-seat="28">Seat 28</button>
+<button type="button" class="seat booked" data-seat="29" disabled>Seat 29</button>
+<button type="button" class="seat" data-seat="30">Seat 30</button>
+<button type="button" class="seat" data-seat="31">Seat 31</button>
+<button type="button" class="seat" data-seat="32">Seat 32</button>
+<button type="button" class="seat" data-seat="33">Seat 33</button>
+<button type="button" class="seat" data-seat="34">Seat 34</button>
+<button type="button" class="seat" data-seat="35">Seat 35</button>
+<button type="button" class="seat booked" data-seat="36" disabled>Seat 36</button>
+<button type="button" class="seat" data-seat="37">Seat 37</button>
+<button type="button" class="seat" data-seat="38">Seat 38</button>
+<button type="button" class="seat" data-seat="39">Seat 39</button>
+<button type="button" class="seat" data-seat="40">Seat 40</button>
+<button type="button" class="seat" data-seat="41">Seat 41</button>
+<button type="button" class="seat" data-seat="42">Seat 42</button>
+<button type="button" class="seat" data-seat="43">Seat 43</button>
+<button type="button" class="seat" data-seat="44">Seat 44</button>
+<button type="button" class="seat booked" data-seat="45" disabled>Seat 45</button>
+<button type="button" class="seat" data-seat="46">Seat 46</button>
+<button type="button" class="seat" data-seat="47">Seat 47</button>
+<button type="button" class="seat" data-seat="48">Seat 48</button>
+<button type="button" class="seat" data-seat="49">Seat 49</button>
+<button type="button" class="seat" data-seat="50">Seat 50</button>
+<button type="button" class="seat" data-seat="51">Seat 51</button>
+<button type="button" class="seat" data-seat="52">Seat 52</button>
+<button type="button" class="seat booked" data-seat="53" disabled>Seat 53</button>
+<button type="button" class="seat" data-seat="54">Seat 54</button>
+<button type="button" class="seat" data-seat="55">Seat 55</button>
+<button type="button" class="seat" data-seat="56">Seat 56</button>
+<button type="button" class="seat" data-seat="57">Seat 57</button>
+<button type="button" class="seat" data-seat="58">Seat 58</button>
+<button type="button" class="seat" data-seat="59">Seat 59</button>
+<button type="button" class="seat" data-seat="60">Seat 60</button>
+<button type="button" class="seat booked" data-seat="61" disabled>Seat 61</button>
+<button type="button" class="seat" data-seat="62">Seat 62</button>
+<button type="button" class="seat" data-seat="63">Seat 63</button>
+<button type="button" class="seat" data-seat="64">Seat 64</button>
+<button type="button" class="seat" data-seat="65">Seat 65</button>
+<button type="button" class="seat" data-seat="66">Seat 66</button>
+<button type="button" class="seat" data-seat="67">Seat 67</button>
+<button type="button" class="seat" data-seat="68">Seat 68</button>
+<button type="button" class="seat" data-seat="69">Seat 69</button>
+<button type="button" class="seat booked" data-seat="70" disabled>Seat 70</button>
+<button type="button" class="seat" data-seat="71">Seat 71</button>
+<button type="button" class="seat" data-seat="72">Seat 72</button>
+<button type="button" class="seat" data-seat="73">Seat 73</button>
+<button type="button" class="seat" data-seat="74">Seat 74</button>
+</div>
 
 <p class="selected-text">
 Selected Seat: <span id="selectedSeat">None</span>
@@ -927,59 +1002,20 @@ document
 
 /* SEAT SYSTEM */
 
-const seatGrid =
-document.getElementById("seatGrid");
-
-const selectedSeat =
-document.getElementById("selectedSeat");
-
+const selectedSeat = document.getElementById("selectedSeat");
 let currentSeat = null;
 
+document.querySelectorAll(".seat:not(.booked)").forEach(function(button){
+    button.addEventListener("click", function(){
+        document.querySelectorAll(".seat").forEach(function(s){
+            s.classList.remove("selected");
+        });
 
-/*
-Demo booked seats.
-You can change these numbers later.
-*/
-
-const bookedSeats = [
-    3, 8, 14, 21, 29, 36, 45, 53, 61, 70
-];
-
-
-for(let i = 1; i <= 74; i++){
-
-const button =
-document.createElement("button");
-
-button.className = "seat";
-button.innerText = i;
-
-if(bookedSeats.includes(i)){
-
-button.classList.add("booked");
-button.disabled = true;
-
-}else{
-
-button.onclick = function(){
-
-document
-.querySelectorAll(".seat")
-.forEach(s => s.classList.remove("selected"));
-
-button.classList.add("selected");
-
-currentSeat = i;
-
-selectedSeat.innerText = "Seat " + i;
-
-};
-
-}
-
-seatGrid.appendChild(button);
-
-}
+        button.classList.add("selected");
+        currentSeat = button.getAttribute("data-seat");
+        selectedSeat.innerText = "Seat " + currentSeat;
+    });
+});
 
 
 /* WHATSAPP BOOKING + ZAPIER */
